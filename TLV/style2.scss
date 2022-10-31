@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+
+// MIXIN
+@mixin transition {
+  transition: ease all 0.3s;
+}
+
+// FONT SIZE mixin
+$maxWidth: 778;
+@mixin adaptiv-font ($psSize, $psLh, $mobSize, $mobLh){
+  $addSize: $psSize - $mobSize;
+  $addLh: $psLh - $mobLh;
+  $addMobSize: $addSize + $addSize * 0.7;
+  $addMobLh: $addLh + $addLh * 0.7;
+
+  @media (max-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 360px) / #{$maxWidth}));
+    line-height: calc(#{$mobLh + px} + #{$addMobLh} * ((100vw - 360px) / #{$maxWidth}));
+  }
+  @media (min-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+    line-height: calc(#{$mobLh + px} + #{$addLh} * (100vw / #{$maxWidth}));
+  }
+  @media (min-width: $maxWidth + px) {
+    font-size: $psSize + px;
+    line-height: $psLh + px;
+  }
+}
+/*
+@include adaptiv-font(52,68,40,56);
+@include adaptiv-font(26,40,22,32);
+@include adaptiv-font(20,32,18,28);
+@include adaptiv-font(18,32,16,24);
+*/
+// COLOR
+$text: #2B2D41;
+
+
+/*Обнуление*/
+@import "css/nulstyle.css";
+/*Шрифты*/
+@import "fonts/fonts.css";
+
+html,
+body {
+  font-family: 'Gilroy', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  color: $text;
+  @include adaptiv-font(20,32,18,28);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $maxWidth + px;
+  width: 100%;
+  padding: 0 24px;
+  @media (max-width: 778px) {
+    padding: 0 20px;
+  }
+}
+
+.form-page {
+  &__body {
+    padding: 48px 0 80px;
+    @media (max-width: 778px) {
+      padding: 40px 0 48px;
+    }
+  }
+  &__back {
+    margin-bottom: 40px;
+    @media (max-width: 778px) {
+      margin-bottom: 24px;
+    }
+    color: #fa7b49;
+    @include adaptiv-font(26,40,22,32);
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 24px;
+      @media (max-width: 778px) {
+        margin-right: 20px;
+        height: 28px;
+        width: 28px;
+      }
+    }
+  }
+  &__title {
+    font-weight: 700;
+    margin-bottom: 24px;
+    @media (max-width: 778px) {
+      margin-bottom: 20px;
+    }
+    @include adaptiv-font(52,68,40,56);
+  }
+  &__subtitle {
+    margin-bottom: 52px;
+    @media (max-width: 778px) {
+      margin-bottom: 44px;
+    }
+    @include adaptiv-font(20,32,18,28);
+  }
+}
+.fp-form {
+  &__row {
+    display: flex;
+    margin: 0 -15px;
+    @media (max-width: 778px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__col {
+    flex: 1 1 50%;
+    padding: 0 15px;
+    @media (max-width: 778px) {
+      flex: 1 1 100%;
+    }
+  }
+  &__group {
+    position: relative;
+    padding-bottom: 32px;
+    @media (max-width: 778px) {
+      padding-bottom: 28px;
+    }
+  }
+  &__input {
+    border-radius: 8px;
+    border: 2px solid rgba(43,45,65, 10%);
+    background-color: #ffffff;
+    @include adaptiv-font(18,32,16,24);
+    width: 100%;
+    height: 56px;
+    padding: 10px 24px;
+    @media (max-width: 778px) {
+      height: 52px;
+      padding: 10px 20px;
+    }
+    &::-webkit-input-placeholder {
+      color: rgba(43,45,65, 40%);
+    }
+    &:-moz-placeholder {
+      color: rgba(43,45,65, 40%);
+    }
+    &::-moz-placeholder {
+      color: rgba(43,45,65, 40%);
+    }
+    &:-ms-input-placeholder {
+      color: rgba(43,45,65, 40%);
+    }
+  }
+  &__textarea {
+    @extend .fp-form__input;
+    height: auto;
+    vertical-align: top;
+  }
+  &__label {
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 1;
+    padding: 0 12px;
+    font-size: 12px;
+    top: 0;
+    left: 16px;
+    transform: translateY(-55%);
+    font-weight: 500;
+  }
+  &__btn {
+    color: #ffffff;
+    background-color: #fa7b49;
+    border-radius: 8px;
+    height: 56px;
+    @media (max-width: 778px) {
+      height: 52px;
+    }
+    width: 255px;
+    font-weight: 600;
+    @include adaptiv-font(18,32,16,24);
+    box-shadow: 4px 20px 40px rgba(0, 0, 0, 20%);
+  }
+}

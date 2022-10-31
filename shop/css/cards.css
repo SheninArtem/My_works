@@ -1,0 +1,260 @@
+.cards {
+  max-height: 772px;
+  overflow: hidden;
+}
+
+.item__main {
+  background: #F2F4FA;
+}
+
+.cards__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.03em;
+  color: #18191C;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.cards__price {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 74.5%;
+  letter-spacing: -0.03em;
+  color: #18191C;
+  margin-bottom: 40px;
+}
+
+.catalog__descr {
+  font-family: 'Gothampro', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 119%;
+  /* or 17px */
+
+  display: flex;
+  align-items: center;
+
+  /* Main black */
+
+  color: #18191C;
+
+  opacity: 0.7;
+  margin: 0;
+  margin-bottom: 40px;
+  max-width: 260px;
+  width: 260px;
+}
+
+.specific__list {
+  padding: 0;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.specific__item {
+  font-family: 'Gothampro', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  /* display: flex;
+align-items: center; */
+  color: #18191C;
+  opacity: 0.7;
+}
+
+.specific__item::marker {
+  color: #18191C;
+  opacity: 0.7;
+}
+
+.cards__left {
+  margin-right: 51px;
+}
+
+.cards__right {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.cards__like {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 74.5%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.03em;
+  color: #18191C;
+  white-space: nowrap;
+  position: relative;
+  right: 30px;
+}
+
+.like-svg {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.like-fill {
+  fill: #E5E8F1;
+  transition: .3s linear;
+}
+
+.like-str {
+  stroke: black;
+  transition: .3s linear;
+}
+
+.like-svg:hover .like-fill {
+  fill: #375FED;
+}
+
+.like-svg:hover .like-str {
+ stroke: #FFFFFF;
+}
+
+.cards__basket {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 74.5%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.03em;
+  color: #18191C;
+  white-space: nowrap;
+  position: relative;
+  right: 24px;
+}
+
+.basket-svg {
+  cursor: pointer;
+}
+
+.cards__right-top {
+  margin-bottom: 10px;
+}
+
+.catalog__color {
+  margin-top: 77px;
+  align-self: flex-end;
+}
+
+.color__item svg {
+  width: 31px;
+  height: 31px;
+  padding: 9px;
+  border-radius: 15.5px;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+.color__item:hover svg {
+  outline: 1px solid #375FED;
+}
+
+.color__list {
+  margin-bottom: 37px;
+}
+
+.cards__right .btc-right {
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.cards__right .btc-left {
+  margin: 0;
+}
+
+/* interes */
+.interes {
+  background: #E5E8F1;
+  padding-top: 63px;
+}
+
+.interes__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.03em;
+  color: #18191C;
+  margin: 0;
+  margin-bottom: 40px;
+  margin-left: 100px;
+}
+
+.interes__block {
+  align-items: center;
+}
+
+.interes__item-image {
+  max-width: 180px;
+  max-height: 285px;
+  width: 180px;
+  height: 285px;
+  border-radius: 82px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 16px;
+  transition: .2s ease-in-out;
+}
+
+.interes__item:hover .interes__item-image {
+  outline: 1px solid #375FED;
+}
+
+.interes__block .btc-left {
+  margin-right: 42px;
+}
+
+.interes1 {
+  background-image: url("../img/catalog15.jpg");
+}
+
+.interes2 {
+  background-image: url("../img/catalog2.jpg");
+}
+
+.interes3 {
+  background-image: url("../img/catalog5.jpg");
+}
+
+.interes4 {
+  background-image: url("../img/catalog8.jpeg");
+}
+
+.interes5 {
+  background-image: url("../img/catalog11.jpg");
+}
+
+.interes__item:not(:last-child) {
+ margin-right: 20px;
+}
+
+.interes__item:last-child {
+  margin-right: 42px;
+}
+
+.interes__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interes__container {
+  padding-bottom: 124px;
+}

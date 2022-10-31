@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style2.css">
+
+
+    <title>RU IT in TLV</title>
+
+</head>
+<body>
+
+
+
+
+<main class="wrapper">
+    <div class="container">
+
+
+
+        <header class="form-page">
+            <div class="form-page__body">
+                <a class="form-page__back" href="./index.html">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 12H21C24.866 12 28 15.134 28 19V19C28 22.866 24.866 26 21 26H20M4 12L10 6M4 12L10 18" stroke="#FA7B49" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Назад
+                </a>
+                <h1 class="form-page__title">
+                    Регистрация профиля
+                </h1>
+                <p class="form-page__subtitle">
+                    Станьте полноценным участником комьнюити
+                </p>
+                <form class="fp-form" enctype="multipart/form-data" method="post">
+                    <div class="fp-form__row">
+                        <div class="fp-form__col">
+                            <div class="fp-form__group">
+                                <label for="name" class="fp-form__label">Имя</label>
+                                <input class="fp-form__input" type="text" name="name" id="name" placeholder="Введите ваше имя">
+                            </div>
+                        </div>
+                        <div class="fp-form__col">
+                            <div class="fp-form__group">
+                                <label for="email" class="fp-form__label">Email</label>
+                                <input class="fp-form__input" type="email" name="email" id="email" placeholder="Введите ваш email">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fp-form__row">
+                        <div class="fp-form__col">
+                            <div class="fp-form__group">
+                                <label for="phone" class="fp-form__label">Телефон</label>
+                                <input class="fp-form__input" type="tel" name="phone" id="phone" placeholder="Введите номер телефона">
+                            </div>
+                        </div>
+                        <div class="fp-form__col">
+                            <div class="fp-form__group">
+                                <label for="company" class="fp-form__label">Компания</label>
+                                <input class="fp-form__input" type="text" name="company" id="company" placeholder="Введите название">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fp-form__row">
+                        <div class="fp-form__col">
+                            <div class="fp-form__group">
+                                <label for="position" class="fp-form__label">Должность</label>
+                                <input class="fp-form__input" type="text" name="position" id="position" placeholder="Введите название">
+                            </div>
+                        </div>
+                        <div class="fp-form__col">
+                            <div class="fp-form__group">
+                                <label for="site" class="fp-form__label">Сайт</label>
+                                <input class="fp-form__input" type="text" name="site" id="site" placeholder="Введите ссылку">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fp-form__row">
+                        <div class="fp-form__col">
+                            <div class="fp-form__group">
+                                <label for="textarea" class="fp-form__label">Комментарий</label>
+                                <textarea class="fp-form__textarea" rows="2" name="textarea" id="textarea" placeholder="Введите текст комментария"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" id="fp-form__btn" class="fp-form__btn">Отправить</button>
+                </form>
+            </div>
+
+        </header>
+
+
+
+    </div>
+</main>
+
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/my-scripts.js"></script>
+</body>
+</html>

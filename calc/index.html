@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Калькулятор</title>
+    <meta name="description" content="Какое то описание" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="dist/magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="dist/slick/slick-theme.css" />
+    <link rel="stylesheet" href="dist/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="scss/style.scss">
+    <link rel="stylesheet" href="scss/responsive.scss">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css.map">
+
+    <!-- favicon -->
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <div class="content__wrap">
+          <button id="btn_modal_window">Открыть модальное</button>
+        </div>
+
+        <div id="dolgModal" class="dolg">
+          <div class="dolg__content">
+            <span class="close_modal_window">×</span>
+
+            <div class="dolg__head">
+              <h2>Узнайте стоимость Вашей процедуры банкротства <span>ПРЯМО СЕЙЧАС</span></h2>
+              <p>Ответьте на несколько вопросов и Вы получите точный расчет стоимости процедуры банкротства физического лица</p>
+            </div>
+
+            <form action="#">
+
+              <div class="dolg__quiz" id="dolgquiz1">
+
+                <div class="dolg__item">
+                  <div class="dolg__item-head">
+                    <h3>1. Размер долгов:</h3>
+                    <p>(общий размер задолженности перед всеми кредиторами, включая основной долг, проценты, штрафы и неустойки)</p>
+                  </div>
+                  <div class="dolg__wrapping">
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="dolg-1" name="dolg" value="0.5 млн – 1 млн рублей">
+                      <label for="dolg-1">0.5 млн – 1 млн рублей</label>
+                    </div>
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="dolg-2" name="dolg" value="1 – 3 млн рублей">
+                      <label for="dolg-2">1 – 3 млн рублей</label>
+                    </div>
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="dolg-3" name="dolg" value="свыше 3 млн рублей">
+                      <label for="dolg-3">свыше 3 млн рублей</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dolg__item">
+                  <div class="dolg__item-head">
+                    <h3>2. Количество кредиторов:</h3>
+                    <p>(количество кредиторов, которым Вы должны)</p>
+                  </div>
+                  <div class="dolg__wrapping">
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="credit-1" name="credit" value="до 3 кредиторов">
+                      <label for="credit-1">до 3 кредиторов</label>
+                    </div>
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="credit-2" name="credit" value="3 – 6 кредиторов">
+                      <label for="credit-2">3 – 6 кредиторов</label>
+                    </div>
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="credit-3" name="credit" value="свыше 6 кредиторов">
+                      <label for="credit-3">свыше 6 кредиторов</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dolg__item">
+                  <div class="dolg__item-head">
+                    <h3>3. Ваше имущество:</h3>
+                    <p>(под имуществом понимается квартиры, дачи, земельные участки, гаражи, автомобили, иные транспортные средства, и т.д., которыми вы обладаете на данный момент)</p>
+                  </div>
+                  <div class="dolg__wrapping">
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="property-1" name="property" value="Не имеется">
+                      <label for="property-1">Не имеется</label>
+                    </div>
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="property-2" name="property" value="Имеется">
+                      <label for="property-2">Имеется</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dolg__item">
+                  <div class="dolg__item-head">
+                    <h3>4. Сделки за последние 3 года:</h3>
+                    <p>(под сделками понимается продажа, дарение, безвозмездная передача, «просто отдали другу» с имуществом (квартира, дача, гараж, автомобиль, земельный участок) в течение 3-х последних лет за исключением того, которое есть в собственности сейчас?)</p>
+                  </div>
+                  <div class="dolg__wrapping">
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="deal-1" name="deal" value="Не имеется">
+                      <label for="deal-1">Не имеется</label>
+                    </div>
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="deal-2" name="deal" value="Имеется">
+                      <label for="deal-2">Имеется</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dolg__btns fl-fe">
+                  <a class="btn btn-bg" id="btn1">Далее</a>
+                </div>
+              </div>
+
+              <div class="dolg__quiz" id="dolgquiz2">
+
+                <div class="dolg__item">
+                  <div class="dolg__item-head">
+                    <h3>5. Семейное положение:</h3>
+                    <p>(учитывается официальный брак, зарегистрированный в ЗАГС. Наличие брачного контракта/договора обсуждается отдельно)</p>
+                  </div>
+                  <div class="dolg__wrapping">
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="family-1" name="family" value="Не женат / не замужем">
+                      <label for="family-1">Не женат / не замужем</label>
+                    </div>
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="family-2" name="family" value="Женат / Замужем">
+                      <label for="family-2">Женат / Замужем</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dolg__item">
+                  <div class="dolg__item-head">
+                    <h3>6. Из какого Вы региона?</h3>
+                  </div>
+                  <div class="dolg__wrapping">
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="city-1" name="city" value="СПБ и ЛО">
+                      <label for="city-1">СПБ и ЛО</label>
+                    </div>
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="city-2" name="city" value="Северо-западный округ (за исключение СПБ и ЛО)">
+                      <label for="city-2">Северо-западный округ (за исключение СПБ и ЛО)</label>
+                    </div>
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="city-3" name="city" value="Москва и МО">
+                      <label for="city-3">Москва и МО</label>
+                    </div>
+                    <div class="dolg__wrap">
+                      <input type="radio" class="dolg-checkbox" id="city-4" name="city" value="Иные регионы РФ">
+                      <label for="city-4">Иные регионы РФ</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dolg__total">
+                  <p>Стоимость процедуры банкротства:</p>
+                  <div class="dolg__total-price">
+                    Итого: <span id="itog"></span> руб.
+                  </div>
+                </div>
+
+                <div class="dolg__fio">
+
+                  <div class="dolg__wrap2">
+                    <label for="dolg-name">Ваше имя</label>
+                    <input type="text" id="dolg-name" name="name">
+                  </div>
+                  <div class="dolg__wrap2">
+                    <label for="dolg-phone">Ваш телефон</label>
+                    <input type="text" id="dolg-phone" name="phone" placeholder="+7 999 999 99 99">
+                  </div>
+
+                </div>
+
+                <div class="dolg__btns">
+                  <a class="btn btn-border" id="btn2">Назад</a>
+                  <button type="submit" class="btn btn-bg" id="btn3">Заказать услугу</button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="dist/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="dist/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/calc.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+.like__btn {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 74.5%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  padding: 20px 37px;
+  background: #375FED;
+  border-radius: 25px;
+  margin-bottom: 40px;
+}
+
+.basket__item:not(:last-child) {
+  margin-bottom: 0px;
+}
+
+
+
+.like__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.like__item {
+  max-width: 784px;
+  width: 784px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like__item-btn {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 74.5%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  padding: 20px 37px;
+  background: #375FED;
+border-radius: 25px;
+white-space: nowrap;
+height: 50px;
+}
+
+.like__btn-svg {
+  cursor: pointer;
+  margin-bottom: 160px;
+  margin-left: 40%;
+}
+
+.circleop {
+  opacity: 0.4;
+  transition: .3s linear;
+}
+
+.pathop {
+  opacity: 0.4;
+  transition: .3s linear;
+}
+
+.like__btn-svg:hover .circleop {
+  opacity: 1;
+}
+
+.like__btn-svg:hover .pathop {
+  opacity: 1;
+}
+
+.invis {
+  display: none;
+}
